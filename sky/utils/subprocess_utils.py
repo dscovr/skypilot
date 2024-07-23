@@ -25,7 +25,7 @@ def run(cmd, **kwargs):
     # rid of this problem, use `log_lib.run_with_log`.
     shell = kwargs.pop('shell', True)
     check = kwargs.pop('check', True)
-    executable = kwargs.pop('executable', '/bin/bash')
+    executable = kwargs.pop('executable', '/usr/bin/env bash')
     if not shell:
         executable = None
     return subprocess.run(cmd,
